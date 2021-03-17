@@ -1,0 +1,44 @@
+<ion-slides pager="false" [options]="slideOpts">
+  <ng-container *ngIf="!isLoading; else loading">
+    <ion-slide *ngFor="let card of cards">
+      <ion-card [ngClass]="card.productBrand.toString()">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-img src="assets/images/imagotipo_white.svg"></ion-img>
+            <span
+              >****
+              {{
+                card.productNumber.substring(card.productNumber.length - 4, 8)
+              }}</span
+            >
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <span>{{ card.BalanceRD | currency: " RD$ " }}</span>
+          <span>{{ card.BalanceUS | currency: " US$ " }}</span>
+        </ion-card-content>
+
+        <ion-card-header>
+          <ion-card-title>
+            <ion-img
+              src="assets/images/{{
+                card.productBrand === 'Visa'
+                  ? 'logotipo-de-visa.svg'
+                  : 'tarjeta-mastercard.svg'
+              }}"
+            ></ion-img>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ng-container>
+</ion-slides>
+
+<ng-template #loading>
+  <ion-slide *ngFor="let _ of [1, 1, 1, 1, 1]">
+    <ion-card [ngStyle]="{ padding: 0 }">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card>
+  </ion-slide>
+</ng-template>

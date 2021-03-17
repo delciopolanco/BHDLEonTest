@@ -1,0 +1,70 @@
+:host {
+  margin: 20px 0;
+}
+
+ion-slide {
+  width: 240px !important;
+}
+
+ion-card {
+  width: 200px !important;
+  height: 300px;
+  margin: 20px 10px;
+  border-radius: 24pt;
+  padding: 5px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ion-skeleton-text {
+    height: 100%;
+    margin: 0;
+  }
+
+  &.Visa {
+    background: var(--green);
+  }
+
+  &.Mastercard {
+    background: var(--brown);
+  }
+
+  ion-card-title {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+
+    span {
+      margin: 10px 0;
+      display: block;
+    }
+  }
+
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+
+    span {
+      display: block;
+      margin: 10px;
+      width: 100%;
+    }
+  }
+}
+
+ion-img {
+  width: 32px;
+  height: 32px;
+}
+
+.swiper-zoom-container {
+  align-items: flex-start;
+  -webkit-align-items: none;
+  -webkit-box-align: none;
+  align-items: none;
+  text-align: none;
+}

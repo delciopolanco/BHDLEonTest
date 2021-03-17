@@ -1,0 +1,74 @@
+.bhdl-input {
+  margin: 25px 0;
+  font-size: 14px;
+
+  &.flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ion-input {
+    color: var(--color-txt-input);
+    border: 2.5px solid var(--color-txt-border);
+    border-radius: 15px;
+    padding: 5px 20px !important;
+    font-size: 16px;
+
+    &::placeholder {
+      font-weight: 200;
+      opacity: 0.5;
+    }
+
+    &.ng-untouched {
+      border: 2.5px solid var(--color-txt-border);
+    }
+
+    &.ng-dirty.ng-invalid:not(.ng-untouched),
+    &.ng-pristine.ng-invalid:not(.ng-untouched) {
+      border: 2.5px solid var(--red);
+      color: var(--red);
+      opacity: 1;
+      font-weight: 400;
+    }
+  }
+
+  small {
+    margin: 10px;
+    display: block;
+    color: var(--red);
+  }
+
+  ion-toggle {
+    height: 22px;
+    width: 40px;
+    --handle-spacing: 3px;
+    --handle-height: 90%;
+    --handle-width: 45%;
+    --handle-border-radius: 15pt;
+    padding: 0;
+    --background: var(--color-txt-border);
+    --handle-background-checked: var(--white);
+    --background-checked: var(--ion-color-primary);
+  }
+
+  ion-label {
+    color: var(--color-txt-label);
+    margin: 3px 10px;
+    font-weight: 400;
+  }
+
+  ion-button {
+    text-transform: inherit;
+    --border-radius: 10px;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 1em;
+    --padding-end: 1em;
+    --transition: background-color, opacity 100ms linear;
+    margin: 4px 2px;
+    height: 3.2em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+  }
+}

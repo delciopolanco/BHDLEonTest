@@ -1,0 +1,40 @@
+<div class="background"></div>
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" size="large">
+      <ion-menu-button
+        menu="first"
+        color="primary"
+        class="bhdleon-ion-menu"
+      ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login">
+    <div class="logo">
+      <ion-img src="assets/images/logo_horizontal.svg"></ion-img>
+    </div>
+    <form [formGroup]="loginForm">
+      <div class="bhdl-input">
+        <ion-input formControlName="username" placeholder="Número de cédula"></ion-input>
+        <small class="error" *ngIf="isInvalid('username')"> Debes ingresar un número de documento</small>
+      </div>
+      <div class="bhdl-input">
+        <ion-input type="password" formControlName="password" placeholder="Pasaporte"></ion-input>
+        <small class="error" *ngIf="isInvalid('password')"> Debes ingresar una contraseña</small>
+      </div>
+
+      <div class="bhdl-input flex-row">
+        <ion-toggle></ion-toggle>
+        <ion-label>Recordar usuario</ion-label>
+      </div>
+
+      <div class="bhdl-input">
+        <ion-button [disabled]="!loginForm.valid"x expand="block" shape="round" size="large" (click)="sining()">Iniciar sesión</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

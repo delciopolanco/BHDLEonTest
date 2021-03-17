@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,53 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Custom */
+@import "./theme/bhd-input.scss";
+
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/TrebuchetMS.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  font-family: var(--Trebuchet);
+  margin: 0;
+}
+
+[background="bhdl-gray"] {
+  --background: var(--gray);
+}
+
+.title {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-txt-input);
+}
+
+.container {
+  margin: 30px;
+
+  ion-label {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+}
